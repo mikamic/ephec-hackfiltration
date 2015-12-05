@@ -31,9 +31,12 @@ public class Dice {
 			return 0;
 	}
 	
-	//de quoi tester ça...
-	public static void main(String[] args){
-		Dice dice = new Dice();
-		System.out.println(dice.chosenSide);
+	//Getters and setters
+	public int getChosenSide() {
+		return chosenSide;
+	}
+
+	public void setChosenSide(int chosenSide) {
+		this.chosenSide = chosenSide;
 	}
 }
