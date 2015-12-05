@@ -1,20 +1,32 @@
 package be.ephec.git.first;
 
 public class Dice {
-
-	private int chosenSide;
+	
+	int myDice = throwOfTheDice();
 	
 	public Dice() {
-		this.chosenSide = throwOfTheDice();
+		displayDiceMessage();
+		moveForward();
+	}
+	
+	public void moveForward() {
+		Player pl = new Player();
+		pl.setSquare(pl.getSquare() + myDice);
+		System.out.println("vous êtes à la case " + pl.getSquare());
+	}
+	
+	public void displayDiceMessage() {
+		System.out.println("Vous avez obtenu un " + myDice);
 	}
 	
 	/**
-	 * 
+	 * Définit la face du dés à afficher
+	 * Define wich side of the dice
 	 * @return integer between 0 and 6
 	 */
 	public int throwOfTheDice() {
 		int random = (int)(Math.random()*100);
-		System.out.println(random);
+		//System.out.println(random);
 		if(random >= 0 && random < 100/6)
 			return 1;
 		else if(random >= 100/6 && random < 2*100/6)
@@ -29,14 +41,5 @@ public class Dice {
 			return 6;
 		else
 			return 0;
-	}
-	
-	//Getters and setters
-	public int getChosenSide() {
-		return chosenSide;
-	}
-
-	public void setChosenSide(int chosenSide) {
-		this.chosenSide = chosenSide;
 	}
 }

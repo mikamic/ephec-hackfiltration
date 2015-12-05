@@ -9,6 +9,15 @@ public class Floor {
 	}
 	
 	public String pickAnEvent() {
+		if(pickALevel() == "bonus")
+			return "bonus";
+		else if(pickALevel() == "malus")
+			return "malus";
+		else
+			return "fail";
+	}
+	
+	public String pickALevel() {
 		if(number >= 0 && number < 100)
 			return EventOfLevel1();
 		else if(number >= 100 && number < 150)

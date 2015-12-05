@@ -2,27 +2,23 @@ package be.ephec.git.first;
 
 public class Player {
 
-	private int square; //n° de la case
+	private static int currentSquare = 0; //n° de la case
 
 	public Player() {
 		
 	}
-	
-	public void moveForward(int square) {
-		this.square = this.square + square;
-	}
 
 	//Getters, setters and toString
 	public int getSquare() {
-		return square;
+		return currentSquare;
 	}
 
 	public void setSquare(int square) {
-		this.square = square;
+		currentSquare = square;
 	}
 	
 	public String toString() {
-		return "Le joueur est à la case n°" + this.square;
+		return "Le joueur est à la case n°" + currentSquare;
 	}
 	
 }
