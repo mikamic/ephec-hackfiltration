@@ -7,6 +7,9 @@ public class Dice {
 	public Dice() {
 		displayDiceMessage();
 		moveForward();
+		Floor fl = new Floor();
+		Player pl = new Player();
+		fl.setNumber(pl.getSquare());
 	}
 	
 	public void moveForward() {

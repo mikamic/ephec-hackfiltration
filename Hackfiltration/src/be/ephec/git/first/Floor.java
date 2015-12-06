@@ -5,10 +5,28 @@ public class Floor {
 	private int number;
 	
 	public Floor() {
-		
+		pickAnEvent();
 	}
 	
-	public String pickAnEvent() {
+	public void pickAnEvent() {
+		Player pl = new Player();
+		String a = pickTypeOfEvent();
+		if(a == "bonus") {
+			System.out.println(a);
+			Key key = new Key();
+			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
+			//PrivateElevator pe = new PrivateElevator();
+		}
+		else if(a == "malus"){
+			System.out.println(a);
+			Janitor jt = new Janitor();
+			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
+		}
+		else if(a == "fail")
+			System.out.println("C'est étage est tranquile");
+	}
+	
+	public String pickTypeOfEvent() {
 		if(pickALevel() == "bonus")
 			return "bonus";
 		else if(pickALevel() == "malus")
