@@ -15,8 +15,8 @@ public abstract class Artefact {
 	
 	public void moveForward(int bonus) {
 		Player pl = new Player();
-		pl.setSquare(pl.getSquare() + bonus);
 		System.out.println("vous êtes à la case " + pl.getSquare());
+		pl.setSquare(pl.getSquare() + bonus);
 	}
 	
 	public void displayBonusMessage(String artefact, int number) {

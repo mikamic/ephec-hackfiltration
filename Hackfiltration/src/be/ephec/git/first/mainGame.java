@@ -10,9 +10,13 @@ public class mainGame {
 		}
 		System.out.println(pl);
 		fl.setNumber(pl.getSquare());
-		System.out.println(fl.getNumber() + " " +fl.pickAnEvent());
-		//if(fl.pickAnEvent() == "bonus")
-			//Key ky = new Key();
+		String a = fl.pickAnEvent();
+		System.out.println(fl.getNumber() + " " + a);
+		Key key;
+		if(a == "bonus")
+			System.out.println(a);
+			key = new Key();
+			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
 			//PrivateElevator pe = new PrivateElevator();
 	}
 	
