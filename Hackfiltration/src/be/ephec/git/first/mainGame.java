@@ -18,6 +18,13 @@ public class mainGame {
 			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
 			//PrivateElevator pe = new PrivateElevator();
 		}
+		else if(a == "malus"){
+			System.out.println(a);
+			Janitor jt = new Janitor();
+			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
+		}
+		else if(a == "fail")
+			System.out.println("C'est étage est tranquile");
 			
 	}
 	
