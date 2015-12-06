@@ -12,12 +12,13 @@ public class mainGame {
 		fl.setNumber(pl.getSquare());
 		String a = fl.pickAnEvent();
 		System.out.println(fl.getNumber() + " " + a);
-		Key key;
-		if(a == "bonus")
+		if(a == "bonus") {
 			System.out.println(a);
-			key = new Key();
+			Key key = new Key();
 			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
 			//PrivateElevator pe = new PrivateElevator();
+		}
+			
 	}
 	
 }
