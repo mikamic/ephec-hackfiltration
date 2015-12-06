@@ -4,9 +4,9 @@ public abstract class NPC {
 
 	int malus; //nbre de case que le pion doit reculer
 
-	public void moveBackward(int bonus) {
+	public void moveBackward(int malus) {
 		Player pl = new Player();
-		pl.setSquare(pl.getSquare() + bonus);
+		pl.setSquare(pl.getSquare() - malus);
 		System.out.println("vous êtes à la case " + pl.getSquare());
 	}
 	
