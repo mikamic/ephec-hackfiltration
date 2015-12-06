@@ -13,13 +13,13 @@ public class Floor {
 		String a = pickTypeOfEvent();
 		if(a == "bonus") {
 			System.out.println(a);
-			Key key = new Key();
+			/*Key key = */new Key();
 			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
 			//PrivateElevator pe = new PrivateElevator();
 		}
 		else if(a == "malus"){
 			System.out.println(a);
-			Janitor jt = new Janitor();
+			/*Janitor jt = */new Janitor();
 			System.out.println("Vous êtes maintenant à la case n°" + pl.getSquare());
 		}
 		else if(a == "fail")

@@ -6,7 +6,7 @@ public class mainGame {
 		Player pl = new Player();
 		System.out.println("Vous êtes à la case " + pl.getSquare());
 		for(int i=0 ; i < 3 ; i++){
-			Dice dice = new Dice();
+			/*Dice dice = */new Dice();
 		}
 	}
 	
