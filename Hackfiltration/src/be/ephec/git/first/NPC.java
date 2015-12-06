@@ -16,7 +16,10 @@ public abstract class NPC {
 	public void moveBackward(int malus) {
 		Player pl = new Player();
 		System.out.println("vous êtes à la case " + pl.getSquare());
-		pl.setSquare(pl.getSquare() - malus);
+		if((pl.getSquare() - malus) < 0)
+			pl.setSquare(0);
+		else
+			pl.setSquare(pl.getSquare() - malus);
 	}
 	
 	public void displayMalusMessage(String npc, int number) {
