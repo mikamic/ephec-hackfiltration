@@ -19,7 +19,7 @@ public class Dice {
 	}
 	
 	public void displayDiceMessage() {
-		System.out.println("Vous avez obtenu un " + myDice);
+		System.out.println("\nVous avez obtenu un " + myDice);
 	}
 	
 	/**
