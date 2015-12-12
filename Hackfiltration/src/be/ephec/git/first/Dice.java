@@ -45,4 +45,8 @@ public class Dice {
 		else
 			return 0;
 	}
+
+	public String toString() {
+		return "" + myDice;
+	}
 }

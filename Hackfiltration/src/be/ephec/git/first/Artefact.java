@@ -15,7 +15,7 @@ public abstract class Artefact {
 	
 	public void moveForward(int bonus) {
 		Player pl = new Player();
-		System.out.println("vous êtes à la case " + pl.getSquare());
+		//System.out.println("vous êtes à la case " + pl.getSquare());
 		pl.setSquare(pl.getSquare() + bonus);
 	}
 	

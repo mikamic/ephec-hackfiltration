@@ -9,15 +9,17 @@ public abstract class NPC {
 	}
 	
 	public NPC(int malus, String npc) {
-		moveBackward(malus);
 		displayMalusMessage(npc, malus);
+		moveBackward(malus);
 	}
 	
 	public void moveBackward(int malus) {
 		Player pl = new Player();
-		System.out.println("vous êtes à la case " + pl.getSquare());
-		if((pl.getSquare() - malus) < 0)
+		//System.out.println("vous êtes à la case " + pl.getSquare());
+		if((pl.getSquare() - malus) < 0) {
+			System.out.println("Mais que faites-vous donc à la cave ?\nRetournez au rez-de-chaussée");
 			pl.setSquare(0);
+		}
 		else
 			pl.setSquare(pl.getSquare() - malus);
 	}
