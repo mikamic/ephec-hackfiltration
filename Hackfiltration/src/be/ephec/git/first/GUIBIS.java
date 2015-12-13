@@ -85,7 +85,9 @@ public class GUIBIS extends JFrame implements ActionListener{
 		
 		/*Penser à corriger le mot "case" par "étage" dans la version finale */
 		
-		//Zone de l'image - Elle ne s'affiche qu'après le premier lancer de dés, à corriger avec le controlleur
+		/*Zone de l'image - Elle ne s'affiche qu'après le premier lancer de dés, à corriger avec le controlleur.
+		Aussi, il faut mettre l'image à la racine du projet, à côté des dossiers "src" et "bin", sinon il ne la trouvera
+		pas. Idéalement, l'image doit être en 650p X 450p, sinon elle sera coupée.*/
 		BufferedImage img = ImageIO.read(new File("office2.jpg"));
 		JLabel imgJLabel = new JLabel(new ImageIcon(img));
 		imgJLabel.setPreferredSize(new Dimension(650, 450));
