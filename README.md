@@ -3,9 +3,9 @@
 
 ###TODO list - Ce qu'il reste à faire
 
-*Socket.
-*Controller.
-*Peaufiner le GUI.
-*Javadoc.
-*Junit.
-*Rapport.
+* Socket
+* Controller
+* Peaufiner le GUI
+* Javadoc
+* Junit
+* Rapport
