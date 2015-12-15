@@ -2,7 +2,7 @@ package be.ephec.git.first;
 
 public abstract class NPC {
 
-	int malus; //nbre de case que le pion doit reculer
+	private int malus; //nbre de case que le pion doit reculer
 
 	public NPC() {
 		
@@ -15,9 +15,9 @@ public abstract class NPC {
 	
 	public void moveBackward(int malus) {
 		Player pl = new Player();
-		//System.out.println("vous êtes à la case " + pl.getSquare());
+		//System.out.println("vous Ãªtes Ã  la case " + pl.getSquare());
 		if((pl.getSquare() - malus) < 0) {
-			System.out.println("Mais que faites-vous donc à la cave ?\nRetournez au rez-de-chaussée");
+			System.out.println("Mais que faites-vous donc Ã  la cave ?\nRetournez au rez-de-chaussÃ©e");
 			pl.setSquare(0);
 		}
 		else
@@ -25,6 +25,6 @@ public abstract class NPC {
 	}
 	
 	public void displayMalusMessage(String npc, int number) {
-		System.out.println("Pas de chance, vous êtes tombé sur " + npc + ".\nReculez de " + number + " cases.");
+		System.out.println("Pas de chance, vous Ãªtes tombÃ© sur " + npc + ".\nReculez de " + number + " cases.");
 	}
 }
