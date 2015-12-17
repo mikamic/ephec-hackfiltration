@@ -1,4 +1,4 @@
-package be.ephec.git.first;
+package be.ephec.coreapp;
 
 public class Janitor extends NPC{
 

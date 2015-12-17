@@ -1,8 +1,9 @@
-package be.ephec.git.first;
+package be.ephec.coreapp;
 
 public class Player {
 
-	private static int currentSquare = 0; //n° de la case
+	private static int currentSquare = 0; //nï¿½ de la case
+	
 
 	public Player() {
 		
@@ -18,7 +19,7 @@ public class Player {
 	}
 	
 	public String toString() {
-		return "Le joueur est à la case n°" + currentSquare;
+		return "Etage actuel: " + currentSquare;
 	}
 	
 }

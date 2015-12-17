@@ -1,4 +1,4 @@
-package be.ephec.git.first;
+package be.ephec.coreapp;
 
 public class Dice {
 	
@@ -8,14 +8,12 @@ public class Dice {
 		displayDiceMessage();
 		moveForward();
 		Floor fl = new Floor();
-		Player pl = new Player();
-		fl.setNumber(pl.getSquare());
 	}
 	
 	public void moveForward() {
 		Player pl = new Player();
 		pl.setSquare(pl.getSquare() + myDice);
-		System.out.println("vous êtes à la case " + pl.getSquare());
+		System.out.println("vous Ãªtes Ã  la case " + pl.getSquare());
 	}
 	
 	public void displayDiceMessage() {
@@ -23,13 +21,12 @@ public class Dice {
 	}
 	
 	/**
-	 * Définit la face du dés à afficher
+	 * DÃ©finit la face du dÃ© Ã  afficher
 	 * Define wich side of the dice
 	 * @return integer between 0 and 6
 	 */
 	public int throwOfTheDice() {
 		int random = (int)(Math.random()*100);
-		//System.out.println(random);
 		if(random >= 0 && random < 100/6)
 			return 1;
 		else if(random >= 100/6 && random < 2*100/6)
@@ -45,4 +42,10 @@ public class Dice {
 		else
 			return 0;
 	}
+
+	public String toString() {
+		return "" + myDice;
+	}
+	
+	
 }

@@ -1,3 +1,5 @@
+package be.ephec.gui;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,17 +9,22 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.Icon;
 
-public class GUIBIS extends JFrame implements ActionListener{
+import be.ephec.coreapp.Artefact;
+import be.ephec.coreapp.Dice;
+import be.ephec.coreapp.Player;
+import be.ephec.coreapp.ScoreUpload;
+
+public class MainGUI extends JFrame implements ActionListener{
 
 	JPanel pan = new JPanel();
 	JPanel jpNorth = new JPanel();
@@ -29,13 +36,13 @@ public class GUIBIS extends JFrame implements ActionListener{
 	JLabel ddJl1 = new JLabel("Veuillez lancer le dés");
 	JLabel ddJl2 = new JLabel("");
 	JPanel displayFloor = new JPanel();
-	JPanel displayEvent = new JPanel();
-	JLabel event = new JLabel("Evenement");
+	/*JPanel displayEvent = new JPanel();
+	JLabel event = new JLabel("Evenement");*/
 	Player pl = new Player();
 	JLabel dfJl = new JLabel(pl.toString());
 	
 	
-	public GUIBIS() throws IOException {
+	public MainGUI() throws IOException {
 		this.setSize(900, 600);
 		this.setLocationRelativeTo(null);
 		this.setTitle("HACKFILTRATION");
@@ -49,12 +56,10 @@ public class GUIBIS extends JFrame implements ActionListener{
 		jpCenter.setBackground(Color.GRAY);
 		
 		jpEast.setPreferredSize(new Dimension(200, this.getContentPane().getHeight()));
-		//jpWest.setPreferredSize(new Dimension(200, this.getContentPane().getHeight()));
 		
 		this.getContentPane().add(jpNorth, BorderLayout.NORTH);
 		this.getContentPane().add(jpSouth, BorderLayout.SOUTH);
 		this.getContentPane().add(jpEast, BorderLayout.EAST);
-		//this.getContentPane().add(jpWest, BorderLayout.WEST);
 		this.getContentPane().add(jpCenter, BorderLayout.CENTER);
 		
 		
@@ -79,16 +84,15 @@ public class GUIBIS extends JFrame implements ActionListener{
 		displayFloor.setPreferredSize(new Dimension(180, 50));
 		jpEast.add(displayFloor);
 		displayFloor.add(dfJl);
-		displayEvent.setPreferredSize(new Dimension(180, 50));
-		jpEast.add(displayEvent);
-		displayEvent.add(event);
+		/*displayEvent.setPreferredSize(new Dimension(this.getContentPane().getWidth(), 50));
+		jpNorth.add(displayEvent);
+		displayEvent.add(event);*/
 		
-		/*Penser à corriger le mot "case" par "étage" dans la version finale */
 		
 		/*Zone de l'image - Elle ne s'affiche qu'après le premier lancer de dés, à corriger avec le controlleur.
 		Aussi, il faut mettre l'image à la racine du projet, à côté des dossiers "src" et "bin", sinon il ne la trouvera
 		pas. Idéalement, l'image doit être en 650p X 450p, sinon elle sera coupée.*/
-		BufferedImage img = ImageIO.read(new File("office2.jpg"));
+		BufferedImage img = ImageIO.read(new File("images/office2.jpg"));
 		JLabel imgJLabel = new JLabel(new ImageIcon(img));
 		imgJLabel.setPreferredSize(new Dimension(650, 450));
 		jpCenter.add(imgJLabel);
@@ -98,18 +102,19 @@ public class GUIBIS extends JFrame implements ActionListener{
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		int s = pl.getSquare();
+		int c = 0;
+		if (s < 20) {
 		Dice di = new Dice();
 		ddJl1.setText("Vous avez obtenu : ");
 		JLabel jl = new JLabel(di.toString());
 		ddJl2.setText(di.toString());
 		dfJl.setText(pl.toString());
-		//Font diceFont = new Font("Tahoma", Font.BOLD, 16);
-		//ddJl.setFont(diceFont);
+		c++;
+		}
+		else {
+			new ScoreUpload();
+		}
 	}
-	
-	public static void main(String[] args) throws IOException {
-		new GUIBIS();
-	}
-
 	
 }
