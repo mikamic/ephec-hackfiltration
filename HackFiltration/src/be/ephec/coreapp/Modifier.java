@@ -1,5 +1,9 @@
 package be.ephec.coreapp;
-
+/**
+ *  Classe qui détermine la valeur numérique du bonus/malus
+ * @param event String évènement qui se produit
+ *@return int valeur du bonus/malus
+ */
 public class Modifier {
 
 	public int getModifier(String event){

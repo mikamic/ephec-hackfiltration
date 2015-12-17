@@ -1,5 +1,9 @@
 package be.ephec.coreapp;
-
+/**
+ * Classe du lancer de dé
+ * @return int résultat du jet de dés.
+ *
+ */
 public class Dice {
 	
 	public int diceThrow() {

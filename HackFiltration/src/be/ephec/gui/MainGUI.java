@@ -1,9 +1,15 @@
 package be.ephec.gui;
-
+/**
+ *Classe d'affichage principale. C'est elle qui gère la création de la fenêtre, ses paramètres, les
+ *évènements demandés par l'utilisateur et la MaJ des informations de l'interface. 
+ *
+ */
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;

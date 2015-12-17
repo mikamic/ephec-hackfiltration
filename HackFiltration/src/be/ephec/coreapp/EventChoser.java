@@ -1,5 +1,9 @@
 package be.ephec.coreapp;
-
+/**
+ *  Classe qui détermine l'évènement aléatoire qui se produit.
+ * @param a String sert à déterminer si on utilise un bonus ou un malus
+ *
+ */
 public class EventChoser {
 	
 	public String eventPick(String a) {

@@ -1,5 +1,7 @@
 package be.ephec.coreapp;
-
+/**
+ * Classe "socket" jumelle de ScoreUpload, et qui permet de recevoir le nom du joueur.
+ */
 
 import java.net.*;
 

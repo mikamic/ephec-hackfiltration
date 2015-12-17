@@ -5,7 +5,11 @@ import javax.swing.JLabel;
 
 import be.ephec.coreapp.*;
 import be.ephec.gui.*;
-
+/**
+ *Boucle principale du programme 
+ *@throws Ne tient pas compte des exceptions pouvant être génrées, car quasi inexistantes.
+ *
+ */
 public class MainController {
 		static int square = 0;
 		static String choice;

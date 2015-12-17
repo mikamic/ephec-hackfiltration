@@ -1,4 +1,7 @@
 package be.ephec.coreapp;
+/**
+* Classe "socket" qui permet d'envoyer au serveur le nom du joueur.
+ */
 
 import javax.swing.JOptionPane;
 import java.net.*;
